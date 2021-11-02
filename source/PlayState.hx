@@ -3036,17 +3036,23 @@ class PlayState extends MusicBeatState
 
 		var daRating:String = "sick";
 
-		if (noteDiff > Conductor.safeZoneOffset * 0.75)
+		if (noteDiff > Conductor.safeZoneOffset * (ClientPrefs.kadeInput ? 0.85 : 0.55))
 		{
 			daRating = 'shit';
-			score = 50;
+			if (ClientPrefs.kadeInput)
+			{
+				score = -100;
+				health -= 0.35;
+			}
+			else
+				score = 50;
 		}
-		else if (noteDiff > Conductor.safeZoneOffset * 0.5)
+		else if (noteDiff > Conductor.safeZoneOffset * (ClientPrefs.kadeInput ? 0.6 : 0.5))
 		{
 			daRating = 'bad';
 			score = 100;
 		}
-		else if (noteDiff > Conductor.safeZoneOffset * 0.25)
+		else if (noteDiff > Conductor.safeZoneOffset * (ClientPrefs.kadeInput ? 0.2 : 0.25))
 		{
 			daRating = 'good';
 			score = 200;
@@ -3271,8 +3277,9 @@ class PlayState extends MusicBeatState
 
 							}
 						}
-						else if (canMiss) 
-							ghostMiss(controlArray[i], i, true);
+						/*else if (canMiss) 
+							ghostMiss(controlArray[i], i, true);*/
+						// fuck ur anti mash
 
 						// I dunno what you need this for but here you go
 						//									- Shubs
