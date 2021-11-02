@@ -1,6 +1,6 @@
 # Friday Night Funkin': VS Accelerant Hank, ported to Psych Engine 0.4.2
 
-The name is self-explanatory lol
+The name is self-explanatory lol, and i add hit windows from shaggy mod (not 6 keys of course)
 
 ### Links: [Psych Engine](https://github.com/ShadowMario/FNF-PsychEngine) - [original port of Accelerant](https://gamebanana.com/mods/331538) - [original Accelerant Hank on vs Online mod](https://gamebanana.com/mods/286594)
 
